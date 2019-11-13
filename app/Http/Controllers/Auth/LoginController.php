@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
+use Socialite;
+use App\Services\SocialGoogleAccountService;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -26,6 +30,41 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
+
+        /**
+     * Redirect the user to the Google authentication page.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from Google.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback(SocialGoogleAccountService $service)
+    {
+        try {
+            $user_goo = Socialite::driver('google')->user();
+            $user = $service->createOrGetUser($user_goo);
+            
+        } catch (\Exception $e) {
+            return redirect('/login');
+        }
+        // only allow people with @company.com to login
+        if(explode("@", $user->email)[1] !== 'gmail.com'){
+            return redirect()->to('/');
+        }
+
+        auth()->login($user);
+        return redirect()->to('/home');
+    }
+
 
     /**
      * Create a new controller instance.

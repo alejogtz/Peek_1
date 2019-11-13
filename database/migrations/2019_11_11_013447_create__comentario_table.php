@@ -15,7 +15,7 @@ class CreateComentarioTable extends Migration
     {
         Schema::create('Comentario', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('contenido');
+            $table->string('content');
             $table->integer('id_user')->unsigned();
             $table->integer('id_post')->unsigned();
             $table->foreign('id_user')

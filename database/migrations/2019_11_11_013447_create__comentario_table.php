@@ -20,7 +20,7 @@ class CreateComentarioTable extends Migration
             $table->integer('id_post')->unsigned();
             $table->foreign('id_user')
             ->references('id')
-            ->on('User')
+            ->on('users')
             ->onDelete('cascade');
             
             $table->foreign('id_post')

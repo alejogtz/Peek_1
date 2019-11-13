@@ -13,15 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('User', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('fhoto');
-            $table->string('description');
-            $table->string('paypal');
+            $table->string('photo')->nullable();
+            $table->string('description')->nullable();
+            $table->string('paypal')->nullable();
             //opcional dependiendo de tipo de cuenta
             $table->integer('age')->nullable();
             $table->string('address')->nullable();

@@ -13,11 +13,11 @@ class CreateFollowsTable extends Migration
      */
     public function up()
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('followers', function (Blueprint $table) {
             $table->integer('user_id')->unsigned();
-            $table->integer('user_id_follow')->unique()
+            $table->integer('user_id_follower')->unique()
                 ->unsigned()
-                ->comment('La cuenta a la que sigue');
+                ->comment('La cuenta que te sigue');
 
             // Foreign Key
             $table->foreign('user_id')
@@ -25,7 +25,7 @@ class CreateFollowsTable extends Migration
                 ->on('users')
                 ->onDelete('cascade');
 
-            $table->foreign('user_id_follow')
+            $table->foreign('user_id_follower')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
@@ -43,6 +43,6 @@ class CreateFollowsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('follows');
+        Schema::dropIfExists('followers');
     }
 }

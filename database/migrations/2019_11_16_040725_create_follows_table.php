@@ -16,7 +16,6 @@ class CreateFollowsTable extends Migration
         Schema::create('follows', function (Blueprint $table) {            
             $table->integer('user_id');
             $table->string('user_id_follow')->comment('La cuenta a la que sigue');
-            $table->string('provider')->comment('Google, Facebook, Etc');            
 
             // Database Vars            
             $table->softDeletes();

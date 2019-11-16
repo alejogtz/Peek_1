@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSocialFacebookAccountsTable extends Migration
+class CreateFollowsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateSocialFacebookAccountsTable extends Migration
      */
     public function up()
     {
-        /*Schema::create('social_facebook_accounts', 
-        function (Blueprint $table) {
+        Schema::create('follows', function (Blueprint $table) {            
             $table->integer('user_id');
-            $table->string('provider_user_id');
-            $table->string('provider');
+            $table->string('user_id_follow')->comment('La cuenta a la que sigue');
+            $table->string('provider')->comment('Google, Facebook, Etc');            
+
+            // Database Vars            
+            $table->softDeletes();
             $table->timestamps();
-          });*/     
+        });
     }
 
     /**
@@ -29,6 +31,6 @@ class CreateSocialFacebookAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_facebook_accounts');
+        Schema::dropIfExists('follows');
     }
 }

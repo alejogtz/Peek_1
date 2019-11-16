@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostTable extends Migration
+class CreatePetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class CreatePostTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('photo');
-            $table->string('description');
-            $table->string('hashtags');
+        Schema::create('pets', function (Blueprint $table) {
+            // Tabla debil
+            $table->string('name')->nullable();
+            $table->integer('age')->nullable()->comment('En meses');
+            $table->enum('sex', ['male','female'])->nullable();
+            $table->string('description')->nullable();
 
             // Foreign Key
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
+                    ->references('id')->on('users')
+                    ->onDelete('cascade');
 
             // Database Vars            
             $table->softDeletes();
@@ -39,6 +39,6 @@ class CreatePostTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('pets');
     }
 }

@@ -15,20 +15,22 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            // Basic info
+            $table->enum('type', ['pet', 'company']);
             $table->string('email')->unique();
-            $table->string('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('photo')->nullable();
-            $table->string('description')->nullable();
+            $table->string('username')->unique();            
+            $table->string('password');                    
+            $table->string('profile_photo')->nullable();            
+
+            //Extra Info
             $table->string('paypal')->nullable();
-            //opcional dependiendo de tipo de cuenta
-            $table->integer('age')->nullable();
-            $table->string('address')->nullable();
             $table->string('phone')->nullable();
-            ////////////////////////////////////////
+
+            // Database Vars
+            $table->string('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

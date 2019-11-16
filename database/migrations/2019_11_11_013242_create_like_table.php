@@ -13,20 +13,24 @@ class CreateLikeTable extends Migration
      */
     public function up()
     {
-        Schema::create('Like', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_user')->unsigned();
-            $table->integer('id_post')->unsigned();
-            
-            $table->foreign('id_user')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
+        Schema::create('likes', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned();
+            $table->integer('post_id')->unsigned();
 
-            $table->foreign('id_post')
-            ->references('id')
-            ->on('Post')
-            ->onDelete('cascade');
+            // Foreign Key
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
+            $table->foreign('post_id')
+                ->references('id')
+                ->on('posts')
+                ->onDelete('cascade');
+
+            // Database Vars            
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -37,6 +41,6 @@ class CreateLikeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Like');
+        Schema::dropIfExists('likes');
     }
 }

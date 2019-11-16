@@ -13,20 +13,27 @@ class CreateComentarioTable extends Migration
      */
     public function up()
     {
-        Schema::create('Comentario', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('comments', function (Blueprint $table) {
+            // Attributes
             $table->string('content');
-            $table->integer('id_user')->unsigned();
-            $table->integer('id_post')->unsigned();
-            $table->foreign('id_user')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
-            
-            $table->foreign('id_post')
-            ->references('id')
-            ->on('Post')
-            ->onDelete('cascade');
+            $table->integer('user_id')->unsigned();
+            $table->integer('post_id')->unsigned();
+
+
+            // Foreign Key
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
+            $table->foreign('post_id')
+                ->references('id')
+                ->on('posts')
+                ->onDelete('cascade');
+
+            // Database Vars            
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -37,6 +44,6 @@ class CreateComentarioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Comentario');
+        Schema::dropIfExists('comments');
     }
 }

@@ -16,15 +16,18 @@ class CreateSocialAccountsTable extends Migration
         Schema::create('social_accounts', function (Blueprint $table) {
             $table->integer('user_id')->unsigned();
             $table->string('provider_user_id');
-            $table->string('provider')->comment('Google, Facebook, Etc');            
+            $table->string('provider')->comment('Google, Facebook, Etc');
+
+            // Foreign Key
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
 
             // Database Vars            
             $table->softDeletes();
             $table->timestamps();
         });
-
-        
-            
     }
 
     /**

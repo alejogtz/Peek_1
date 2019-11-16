@@ -13,9 +13,20 @@ class CreateFollowsTable extends Migration
      */
     public function up()
     {
-        Schema::create('follows', function (Blueprint $table) {            
+        Schema::create('follows', function (Blueprint $table) {
             $table->integer('user_id');
-            $table->string('user_id_follow')->comment('La cuenta a la que sigue');
+            $table->integer('user_id_follow')->unique()->comment('La cuenta a la que sigue');
+
+            // Foreign Key
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
+            $table->foreign('user_id_follow')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
 
             // Database Vars            
             $table->softDeletes();

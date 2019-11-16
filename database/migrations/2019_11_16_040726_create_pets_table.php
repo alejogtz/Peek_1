@@ -18,6 +18,7 @@ class CreatePetsTable extends Migration
             $table->string('name')->nullable();
             $table->integer('age')->nullable()->comment('En meses');
             $table->enum('sex', ['male','female'])->nullable();
+            $table->string('specie')->nullable()->comment('Si es Gato, Perro, Ave, etc');
             $table->string('description')->nullable();
 
             // Foreign Key

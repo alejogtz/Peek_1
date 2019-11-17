@@ -15,7 +15,7 @@ class CreateFollowsTable extends Migration
     {
         Schema::create('followers', function (Blueprint $table) {
             $table->integer('user_id')->unsigned();
-            $table->integer('user_id_follower')->unique()
+            $table->integer('user_id_follower')
                 ->unsigned()
                 ->comment('La cuenta que te sigue');
 
@@ -29,6 +29,9 @@ class CreateFollowsTable extends Migration
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
+
+            // Unique Keys
+            $table->unique(['user_id', 'user_id_follower']);
 
             // Database Vars            
             $table->softDeletes();

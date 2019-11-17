@@ -29,7 +29,7 @@ class Post extends Model
 	/**
 	 * Get the users who liked the post.
 	 */
-	public function users_who_liked()
+	public function usersLikedPost()
 	{
 		return $this->belongsToMany(User::class, 'likes', 'post_id', 'user_id');
 	}
@@ -37,8 +37,9 @@ class Post extends Model
 	/**
 	 * Get the users who commented the post.
 	 */
-	public function users_who_commented()
+	public function usersCommentedPost()
 	{
-		return $this->belongsToMany(User::class, 'comments', 'post_id', 'user_id');
+		return $this->belongsToMany(User::class, 'comments', 'post_id', 'user_id')
+					->withPivot('content');
 	}
 }

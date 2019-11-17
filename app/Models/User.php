@@ -53,4 +53,20 @@ class User extends Model
         return $this->belongsToMany(User::class,'followers','user_id_follower','user_id');
     }   
 
+    /**
+     * Get the Pet binded
+     */
+    public function pet()
+    {
+        return $this->hasOne(Pet::class);
+    }   
+
+    /**
+     * Get the Company binded
+     */
+    public function company()
+    {
+        return $this->hasOne(Company::class);
+    }   
+
 }

@@ -78,7 +78,7 @@ class LoginController extends Controller
             return redirect()->to('/home');
         } else {
             echo 'No existe en la BD!!!!!';
-            return view('welcome', $user);
+            return view('welcome')->with('user_google', $user);
         }
     }
 }

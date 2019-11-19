@@ -13,3 +13,4 @@ yarn-error.log
 .env.*
 peek.png
 app/ModelsORM/Users.php
+database/seeds/UsersTableSeeder.php

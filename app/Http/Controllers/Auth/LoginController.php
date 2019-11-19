@@ -55,7 +55,7 @@ class LoginController extends Controller
     /**
      * Obtain the user information from Google.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function handleProviderCallback()
     {
@@ -64,29 +64,21 @@ class LoginController extends Controller
         } catch (\Exception $e) {
             return redirect('/login');
         }
-        // only allow people with @company.com to login
-        if(explode("@", $user->email)[1] !== 'gmail.com'){
-            return redirect()->to('/');
-        }
-
-        echo 'Logged!!!!!!!';
+       
+        echo 'Helllllloww!!!!!!';
 
         // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();
+
         if($existingUser){
+            echo 'Existe en la BD!!!!!!';
+
             // log them in
             auth()->login($existingUser, true);
+            return redirect()->to('/home');
         } else {
-            // create a new user
-            $newUser                  = new User;
-            $newUser->name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->google_id       = $user->id;
-            $newUser->avatar          = $user->avatar;
-            $newUser->avatar_original = $user->avatar_original;
-            $newUser->save();
-            auth()->login($newUser, true);
+            echo 'No existe en la BD!!!!!';
+            return view('welcome', $user);
         }
-        return redirect()->to('/home');
     }
 }

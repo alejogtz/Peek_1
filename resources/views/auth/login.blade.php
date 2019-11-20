@@ -63,7 +63,7 @@
                               <a href="{{url('/redirect')}}" class="col-lg-6 a-facebook">
                                 <img src="facebook.png" class="facebook-logo">
                               </a>
-                              <a href="{{url('/redirect')}}" class="col-lg-6 a-google">
+                              <a href="{{url('/redirectgoo')}}" class="col-lg-6 a-google">
                                 <img src="google.png" class="google-logo">
                               </a>
                           </div>

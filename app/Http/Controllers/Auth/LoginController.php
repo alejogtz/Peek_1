@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Services\SocialGoogleAccountService;
+
+
 use App\User;
 use Socialite;
 
@@ -55,38 +58,16 @@ class LoginController extends Controller
     /**
      * Obtain the user information from Google.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback(SocialGoogleAccountService $service)
     {
         try {
-            $user = Socialite::driver('google')->user();
+            $user = $service->createOrGetUser(Socialite::driver('google')->user());
+            auth()->login($user);
+            return redirect()->to('/home');
         } catch (\Exception $e) {
             return redirect('/login');
         }
-        // only allow people with @company.com to login
-        if(explode("@", $user->email)[1] !== 'gmail.com'){
-            return redirect()->to('/');
-        }
-
-        echo 'Logged!!!!!!!';
-
-        // check if they're an existing user
-        $existingUser = User::where('email', $user->email)->first();
-        if($existingUser){
-            // log them in
-            auth()->login($existingUser, true);
-        } else {
-            // create a new user
-            $newUser                  = new User;
-            $newUser->name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->google_id       = $user->id;
-            $newUser->avatar          = $user->avatar;
-            $newUser->avatar_original = $user->avatar_original;
-            $newUser->save();
-            auth()->login($newUser, true);
-        }
-        return redirect()->to('/home');
     }
 }

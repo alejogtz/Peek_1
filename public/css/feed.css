@@ -1,0 +1,140 @@
+.barra{
+  -webkit-box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
+  box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
+  height: 70px;
+  position: fixed;
+  width: -moz-available;
+  z-index: 2;
+}
+
+.logo{
+  width: 110px !important;
+  margin-left: 100px;
+}
+
+.busqueda{
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-right: 13px;
+  margin-top: 9px;
+}
+
+.form-control{
+  text-align: center !important;
+  height: calc(2.19rem - 4px) !important;
+}
+.navbar{
+  display: block !important;
+
+}
+
+.boton-login{
+  text-align: center !important;
+  margin-right: 90px;
+  margin-top: 10px;
+  height: 32px !important;
+  border-radius: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #bc59d7 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 11px;
+  -webkit-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+-moz-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+}
+
+.btn-donar{
+  text-align: center !important;
+  margin-left: 55%;
+  margin-top: 0px;
+  height: 32px !important;
+  border-radius: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #bc59d7 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 11px;
+  -webkit-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+  -moz-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+  box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+}
+
+.perfil{
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.perfil-tarjeta{
+  height: 35px;
+  border-radius: 40px;
+  margin-left: 40px;
+  margin-top: 6px;
+}
+
+.derecha{
+  float: right;
+  position: fixed;
+}
+
+.izquierda{
+  float: left;
+  width: 58%;
+  height: 700px;
+  margin-top: 90px;
+}
+
+.tarjeta{
+  margin-left: 140px;
+  width: 540px !important;
+  border-radius: 7px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.user{
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.fa{
+  font-size: 23px !important;
+}
+
+.fa-heart-o {
+  color: gray;
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: #ff5e5e;
+  cursor: pointer;
+}
+
+.likes-number{
+  margin-left: 10px;
+  margin-top: 4px;
+  margin-bottom: 7px;
+}
+
+#heart{
+  margin-left: 15px;
+  margin-top: 4px;
+}
+
+.hashtag{
+  margin-left: 1px;
+}
+
+p{
+  margin-bottom: 3px;
+}

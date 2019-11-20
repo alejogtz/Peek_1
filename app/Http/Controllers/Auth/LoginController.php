@@ -57,28 +57,14 @@ class LoginController extends Controller
      *
      * @return mixed
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback(SocialGoogleAccountService $service)
     {
         try {
-            $user = Socialite::driver('google')->user();
+            $user = $service->createOrGetUser(Socialite::driver('google')->user());
+            auth()->login($user);
+            return redirect()->to('/home');
         } catch (\Exception $e) {
             return redirect('/login');
-        }
-       
-        echo 'Helllllloww!!!!!!';
-
-        // check if they're an existing user
-        $existingUser = User::where('email', $user->email)->first();
-
-        if($existingUser){
-            echo 'Existe en la BD!!!!!!';
-
-            // log them in
-            auth()->login($existingUser, true);
-            return redirect()->to('/home');
-        } else {
-            echo 'No existe en la BD!!!!!';
-            return view('welcome')->with('user_google', $user);
         }
     }
 }

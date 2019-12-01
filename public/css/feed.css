@@ -1,10 +1,15 @@
+html{
+  background-image: url("../fondofeed.jpg");
+  background-attachment: fixed;
+}
+
 .barra{
   -webkit-box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
   box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
   height: 70px;
+  width: 100%;
   position: fixed;
-  width: -moz-available;
   z-index: 2;
 }
 
@@ -80,7 +85,11 @@ box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
 
 .derecha{
   float: right;
-  position: fixed;
+  margin-top: 80px;
+  background-color: gray !important;
+  width: 42%;
+  height: 100%;
+
 }
 
 .izquierda{
@@ -96,6 +105,9 @@ box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
   border-radius: 7px;
   margin-top: 20px;
   margin-bottom: 40px;
+  -webkit-box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
 }
 
 .user{
@@ -137,4 +149,94 @@ box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
 
 p{
   margin-bottom: 3px;
+}
+
+.busqueda-veter{
+  position: fixed;
+  margin-top: 40px;
+  width: 387px !important;
+  height: 60px;
+  -webkit-box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+}
+
+
+.tarjeta-veter{
+  position: fixed;
+  margin-top: 120px;
+  width: 387px !important;
+  -webkit-box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
+}
+
+
+.subtarjeta{
+  width: 100%;
+  height: 80px;
+}
+
+.body-tarj-veter{
+  padding: 0px !important;
+}
+
+.card-img{
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.titulo-veter{
+  color: #5ea6ff;
+  font-weight: bold;
+}
+
+.stars{
+  height: 20px;
+}
+
+.card-title{
+  margin-bottom: 0px;
+}
+
+.btn-ver{
+  text-align: center !important;
+  margin-left: 0%;
+  margin-top: 0px;
+  height: 32px !important;
+  border-radius: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #bc59d7 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 11px;
+  -webkit-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+  -moz-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+  box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+}
+
+.mb-3{
+  margin-bottom:  0px !important;
+}
+
+.busqueda-logo{
+  margin-left: 17px;
+  margin-top: 10px;
+  width: 45%;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.banner{
+  width: 385px;
+  height: 70px;
 }

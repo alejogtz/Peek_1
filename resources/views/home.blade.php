@@ -49,11 +49,12 @@
       </div>
       </nav>
 
+
       <div class="izquierda">
         <div class="card tarjeta">
           <div class="row">
-            <img src="perfil.jpg" class="perfil-tarjeta" >
-            <p class="user">pancrasio_gordito</p>
+            <img src="perrito.jpg" class="perfil-tarjeta" >
+            <p class="user"><a href="/perfil">firulais_cachorro</a></p>
           </div>
           <img src="perfil.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -62,7 +63,7 @@
               <p class="likes-number"><strong>200</strong> Me gusta</p>
               <a class="btn btn-donar" href="">Donar</a>
             </div>
-              <p class="card-text"><strong>pancrasio_gordito:</strong>  Muy cómodo, doname y seré feliz :)</p>
+              <p class="card-text"><strong>firulais_cachorro:</strong>  Muy cómodo, doname y seré feliz :)</p>
             <div class="row hashtag">
               <a class="" href=""><strong>#dog</strong></a>
               <a class="" href=""><strong>#relax</strong></a>
@@ -124,7 +125,7 @@
             <img src="perfil.jpg" class="perfil-tarjeta" >
             <p class="user">pancrasio_gordito</p>
           </div>
-          <img src="foto5.jpg" class="card-img-top" alt="...">
+          <img src="foto52.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
@@ -135,10 +136,7 @@
             <div class="row hashtag">
               <a class="" href=""><strong>#feliz</strong></a>
               <a class="" href=""><strong>#relax</strong></a>
-              <a class="" href=""><strong>#amame</
-
-
-                strong></a>
+              <a class="" href=""><strong>#amame</strong></a>
               <a class="" href=""><strong>#soltero</strong></a>
               <a class="" href=""><strong>#doname</strong></a>
               <a class="" href=""><strong>#perrito</strong></a>
@@ -150,7 +148,7 @@
             <img src="perfil.jpg" class="perfil-tarjeta" >
             <p class="user">pancrasio_gordito</p>
           </div>
-          <img src="foto4.jpg" class="card-img-top" alt="...">
+          <img src="foto42.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
@@ -170,7 +168,126 @@
         </div>
       </div>
       <div class="derecha">
+        <div class="card  busqueda-veter" >
+
+          <div class="card-body body-tarj-veter">
+              <img src="veterinarias.png" class="busqueda-logo">
+          </div>
+        </div>
+
+        <div class="card  tarjeta-veter" >
+
+          <div class="card-body body-tarj-veter">
+
+            <div class="card mb-3 subtarjeta" >
+              <div class="row no-gutters">
+                <div class="col-md-3">
+                  <img src="vete4.png" class="card-img " alt="...">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h5 class="card-title titulo-veter">Espacio Animal</h5>
+                        <img src="fivestars.png" class="stars " >
+                      </div>
+
+                      <div class="col-lg-4">
+                          <a class="btn btn-ver" href="">Ver</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 subtarjeta" >
+              <div class="row no-gutters">
+                <div class="col-md-3">
+                  <img src="vete2.png" class="card-img " alt="...">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h5 class="card-title titulo-veter">Doctor Roksana</h5>
+                        <img src="fivestars.png" class="stars " >
+                      </div>
+
+                      <div class="col-lg-4">
+                          <a class="btn btn-ver" href="">Ver</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 subtarjeta" >
+              <div class="row no-gutters">
+                <div class="col-md-3">
+                  <img src="vete3.png" class="card-img " alt="...">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h5 class="card-title titulo-veter">CliniPet Oaxaca</h5>
+                        <img src="fivestars.png" class="stars " >
+                      </div>
+
+                      <div class="col-lg-4">
+                          <a class="btn btn-ver" href="">Ver</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 subtarjeta" >
+              <div class="row no-gutters">
+                <div class="col-md-3">
+                  <img src="vete1.png" class="card-img " alt="...">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h5 class="card-title titulo-veter">Dr. Martin</h5>
+                        <img src="fivestars.png" class="stars " >
+                      </div>
+
+                      <div class="col-lg-4">
+                          <a class="btn btn-ver" href="/veter">Ver</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 subtarjeta" >
+              <div class="row no-gutters">
+                <div class="col-lg-8">
+                  <img src="banner.png" class="banner " alt="...">
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </div>
       </div>
+
 
 
     </body>

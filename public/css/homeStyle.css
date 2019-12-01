@@ -1,0 +1,242 @@
+h2{ font-weight:normal;  margin:40px 10px 40px 15px}
+
+a:hover {
+	font-weight: bold;
+	color: gray;
+}
+.a-app{ margin-left: 20px; background-color: #fd3b72; color: white; padding: 10px; border-radius: 7px;}
+.ul-app{margin-bottom: 30px;}
+.pink-pill{ color:#fd3b72;  border-style:solid;  border-width:1px !important;  margin-left:3px !important;  margin-right:3px !important;  margin-top:4px !important;  margin-bottom:4px !important}
+
+.margen-abajo{ margin-bottom:40px;  margin-top:20px}
+
+.radio{ border-radius:15px;  margin-top:10px}
+
+.texto-centrado{ margin-top:50px;  text-align:center;  font-weight:bold}
+
+.img-no-local{ height:210px;  width:190px}
+
+.nav-pills .nav-link.active,
+.show.nav-pills .nav-link{ background:#fd3b72 !important}
+
+.pmodal{ margin:40px 10px 10px 0px}
+
+.margen_texto1{ margin:30px 0px 10px 0px}
+
+.bold{ font-weight:bold}
+
+.imageninicio{ width:120rem; height: 40rem; filter:brightness(0.6)}
+
+.nav-bar-color{ background-color:#fd3b72}
+
+.icon-navbar{width:170px; height:42px}
+
+.type-leter{ font-family: 'Quicksand',sans-serif}
+
+.separator-option{ margin-left:20px;  margin-right:20px}
+
+.separator-info{ margin-left:137px;  margin-right:35px}
+.separator-info2{ margin-left:137px;  margin-right:55px}
+.separator-info3{ margin-left:137px;  margin-right:47px}
+
+.separator-card{ margin-left:40px;  margin-right:40px}
+
+.text-min{ color:#999;  font-size:14px}
+
+.pink-card{ color:#fd3b72;  font-size:14px}
+
+.columnas-separator{ -webkit-column-count:2;  -moz-column-count:2;  column-count:2}
+
+.color-pink{color:#fd3b72}
+
+.color-orange{background-color:#F78E06}
+
+.color-gray{color:#999}
+
+.text-black{ background-color:#000}
+
+.text-orange{ color:#f8b65b}
+
+.centro{ top:50%;  left:50%;  transform:translate(-50%,-50%)}
+
+.texto-chico{ font-size:17px;  color:#fd3b72}
+
+.texto-direccion{ font-size:10px}
+
+.centrado{ position:absolute;  top:50%;  left:50%;  transform:translate(-50%,-50%)}
+
+.img-tam{ height:30px;  width:30px}
+
+.img-logo-oaxaca{ height:80px;  width:70px}
+
+.texto-foot{ font-size:16px}
+
+.texto-foot-2{ font-size:13px}
+
+.btn-ovalo{border-radius:50px; border-color:#fd3b72}
+
+.contenedor{ position:relative;  display:inline-block;  text-align:center;  width:100%}
+
+.contenedorTarjeta{ margin-top: 3rem; margin-right: 9rem; margin-left: 9rem; margin-bottom: 2rem;}
+
+.texto-encima{ position:absolute;  top:10px;  left:10px}
+
+.centrado{ position:absolute;  top:50%;  left:50%;  transform:translate(-50%,-50%)}
+.tituloP{font-size: 10rem;}
+
+.font-img-size{font-size:250%}
+
+.img-tam{height:30px; width:30px}
+
+hr{border-width:3px}
+
+.gallery{-webkit-column-count:3; -moz-column-count:3; column-count:3; -webkit-column-width:33%; -moz-column-width:33%; column-width:33%}
+.gallery .pics{-webkit-transition:all 350ms ease; transition:all 350ms ease}
+.gallery .animation{-webkit-transform:scale(1); -ms-transform:scale(1); transform:scale(1)}
+
+@media (max-width:450px){.gallery{-webkit-column-count:1; -moz-column-count:1; column-count:1; -webkit-column-width:100%; -moz-column-width:100%; column-width:100%}
+}
+
+@media (max-width:400px){.btn.filter{padding-left:1.1rem; padding-right:1.1rem}
+}
+
+.style-tarjeta{ width:18rem;  margin:0 auto}
+
+.style-centrado{ margin:0 auto}
+
+.sepbtn{
+	margin-left:5px;  margin-right:5px
+}
+
+.text-boton-local{
+	background-color: #fd3b72;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 35%;
+}
+
+.negritas{
+	font-weight: bold;
+	text-align: center;
+}
+
+.margen-arriba{
+	margin-top: 20px;
+}
+
+.separador{
+	margin-top: 20px;
+}
+
+.text-modal{
+	color: black;  font-size:16px; margin: 20px 20px 20px 20px; text-align: justify;
+}
+
+.lista{
+	text-transform: capitalize;
+	font-style: italic;
+	color:#999;
+}
+
+.margen-iz-modal{
+	margin-left: 20px;
+}
+
+.margen-derecho-modal{
+	margin-right: 10px;
+	margin-top: -5px;
+}
+
+.contenido-amplio{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+.img-aplicacion{
+	width: 100%;
+	height: 100%;
+	background-image: url("../../img/aplicacion.jpg");
+	background-size: cover;
+}
+
+.texto-aplicacion{
+	margin-bottom: 20%;
+	margin-top: 50px;
+}
+
+.titulo-negritas{
+	font-weight: bold;
+}
+
+.menu-abajo{
+	position: fixed;
+	left:0;
+	top: 270px;
+	width: 40px;
+	height: 150px;
+	z-index: 1000;
+	box-shadow: 10px black;
+}
+
+.menu-abajo ul{
+	list-style: none;
+	padding: 0px;
+    border-radius: 5px;
+}
+
+
+.menu-abajo ul li a{
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	margin: 0px;
+	opacity: 0;
+	-webkit-transition: all 270ms ease;
+	-o-transition: all 270ms ease;
+	transition: all: 270ms ease;
+	height: 34px;
+	color: white;
+}
+
+
+.img-arriba{
+	z-index: 7000 !important;
+	padding: 5px;
+	padding-right: 8px;
+	background-color: #ff7ca1;
+}
+
+.menu-abajo ul li a:hover{
+	opacity: 1 !important;
+	color: white;
+	padding-right: 10px;
+	background-color: #fd3b72;
+	margin-left: 30px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.interlineado{
+	line-height: 1.5;
+}
+
+.imgC{
+	width: 320px;
+	height: 320px;
+}
+
+.margen{
+	margin-right: 10px !important;
+}
+
+.te{
+	text-align: left;
+}
+
+.textoCosto{
+	text-align: left;
+	 background-color: gray;
+	 color: white;
+}

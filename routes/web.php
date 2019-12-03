@@ -31,3 +31,4 @@ Route::get('/callbackgoo', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/perfil','ControllerPerfil@verVistaPerfil');
 Route::get('/veter','ControllerPerfil@verVistaVeterinario');
+

@@ -1,0 +1,176 @@
+html{
+  background-image: url("../fondo.jpg");
+}
+
+.fondomovil{
+  visibility: collapse;
+}
+
+.izquierda{
+  float: left !important;
+  margin-top: 44px;
+  margin-left: 30px;
+  border-radius: 25px;
+  width: 55%;
+  -webkit-box-shadow: 2px 3px 21px -5px rgba(0,0,0,0.67) ;
+-moz-box-shadow: 2px 3px 21px -5px rgba(0,0,0,0.67);
+box-shadow: 2px 3px 21px -5px rgba(0,0,0,0.67);
+}
+
+
+.user-logo{
+  width: 30%;
+  height: 30%;
+  display:block;
+  margin:auto;
+  margin-top: 40px;
+}
+
+.contenido-login{
+  margin-top: 25px;
+}
+
+.forma{
+  margin-left: 45%;
+  border-radius: 17px !important;
+  width: 210px;
+  height: 45px;
+  border: 0px !important;
+  -webkit-box-shadow: 2px 4px 16px -9px rgba(0,0,0,0.67);
+-moz-box-shadow: 2px 4px 16px -9px rgba(0,0,0,0.67);
+box-shadow: 2px 4px 16px -9px rgba(0,0,0,0.67);
+}
+
+::placeholder {
+  font-weight: bold;
+  color: black !important;
+  font-size: 13px !important;
+}
+
+.boton-login{
+  text-align: center !important;
+  margin-left: 123px;
+  border-radius: 34px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: #bc59d7 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 13px;
+  -webkit-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+-moz-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+}
+
+.parrafo-claro{
+  font-size: 11px;
+  color: gray;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.a-facebook{
+  text-align: end;
+}
+.a-google{
+  padding-left: 0px !important;
+}
+.facebook-logo{
+  width: 14%;
+}
+.google-logo{
+  width: 15%;
+}
+
+.registrarse{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #67b0ff !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+
+  .izquierda{
+    margin-left: 0px;
+    width: 100%;
+    -webkit-box-shadow: none ;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-top: 40px;
+  }
+
+  .forma{
+    margin-left: 0%;
+    width: 100%;
+    border-radius: 13px !important;
+  }
+
+  .boton-login{
+    margin-left: 10%;
+    padding-right: 80px;
+    padding-left: 80px;
+    border-radius: 10px;
+    height: 40px;
+  }
+
+  .user-logo{
+    width: 30%;
+    margin-top: 30px;
+  }
+
+  .card{
+    border: none !important;
+  }
+
+  .a-facebook{
+    width: 50%;
+    margin-left: 7px !important;
+    z-index: 2;
+  }
+
+  .a-google{
+    width: 25%;
+      z-index: 2;
+  }
+
+  .facebook-logo{
+    width: 28px;
+    margin-left: 20px !important;
+  }
+
+  .google-logo{
+    width: 30px;
+  }
+
+  .registrarse{
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 40%;
+    margin-top: 0px;
+    z-index: 3 !important;
+  }
+
+  .fondomovil{
+    width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin-top: 470px;
+  margin-left: 0px;
+  visibility: visible;
+  border-radius: 25px;
+  }
+
+  .contenido-login{
+    margin-top: 7px;
+  }
+
+  .parrafo-claro{
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+}

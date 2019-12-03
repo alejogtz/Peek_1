@@ -4,6 +4,7 @@
 <div class="container">
 
         <div class="col-md-8">
+
             <div class="card izquierda">
                <img src="peeklogo.png" class="user-logo">
 
@@ -60,10 +61,10 @@
 
 
                           <div class="row">
-                              <a href="{{url('/redirect')}}" class="col-lg-6 a-facebook">
+                              <a href="{{url('/redirect')}}" class="col-lg-6 col-sm-6 a-facebook">
                                 <img src="facebook.png" class="facebook-logo">
                               </a>
-                              <a href="{{url('/redirectgoo')}}" class="col-lg-6 a-google">
+                              <a href="{{url('/redirect')}}" class="col-lg-6 col-sm-6 a-google">
                                 <img src="google.png" class="google-logo">
                               </a>
                           </div>
@@ -72,7 +73,10 @@
                     </form>
 
             </div>
+            <img src="huellas.png" class="fondomovil">
         </div>
+
     </div>
+
 
 @endsection

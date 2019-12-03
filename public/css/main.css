@@ -1,0 +1,187 @@
+.contenido{
+  padding-top: 80px;
+}
+
+.centrado{
+  text-align: center;
+  float: right;
+}
+
+.logo{
+  padding: 0 .5rem 0 1rem;
+  width: 20rem;
+}
+
+.buscar{
+  padding-right: 15rem;
+}
+
+.cafe{
+  background-color: #c33c05;
+  color: white;
+  border-color: inherit;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+.blanco{
+  border-color: gray;
+  text-align: right;
+  margin-left: 12rem;
+}
+
+.tasty{
+  width: 6rem;
+  margin-right: 15rem;
+  margin-left: 1rem;
+}
+
+.barra{
+  -webkit-box-shadow: 0px 7px 22px -16px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 22px -16px rgba(0,0,0,0.75);
+box-shadow: 0px 7px 22px -16px rgba(0,0,0,0.75);
+background-color: #fff5f1;
+}
+
+@media screen and (max-width: 575.98px) {
+  .blanco{
+    border-color: gray;
+    margin-left: 120px;
+  }
+
+  .buscar{
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .blanco{
+    border-color: gray;
+    margin-left: 40%;
+    margin-top: 1%;
+  }
+
+  .buscar{
+    margin-left: 20%;
+  }
+}
+
+.conten{
+   margin-top: 6rem;
+   margin-right: 1rem;
+   margin-left: 1rem;
+}
+
+.contenRow{
+  margin-right: 6rem;
+  margin-left: 6rem;
+}
+
+.imgPanel{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+  width: 50%;
+  right: 50%;
+
+}
+
+.mPanel{
+  padding-bottom: 3rem;
+}
+
+.tituloPanel{
+  text-align: left;
+  color:  #111111;
+  font-weight: bold;
+  font-size: 280%;
+}
+
+.tituloDescrip{
+  text-align: left;
+  color:  #65686f;
+  font-weight: bold;
+  font-size: 150%;
+
+}
+
+.tituloUno{
+  text-align: left;
+  color:  #55585d;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.tituloDos{
+  text-align: left;
+  color:  #8d9296;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.magTit{
+  margin-right: 6rem;
+}
+
+.titCrud{
+  padding-left: 4rem;
+}
+
+
+.tituloCrud{
+  text-align: left;
+  color:  #c33c05;
+  font-weight: bold;
+  font-size: 350%;
+}
+
+.sombra{
+  -webkit-box-shadow: 6px 9px 19px -5px rgba(41,41,41,0.72);
+  -moz-box-shadow: 6px 9px 19px -5px rgba(41,41,41,0.72);
+   box-shadow: 6px 9px 19px -5px rgba(41,41,41,0.72);
+
+}
+
+
+.contenTabla{
+  /*margin-right: 6rem;*/
+  margin-left: 6rem;
+  padding-right: 12rem;
+}
+
+.tamBTabla
+{
+  width: 40%;
+  height: 40%;
+}
+
+
+.espacioForm{
+  margin-top: 2rem;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+
+.espacioTarjeta{
+  margin-bottom: 2rem;
+}
+
+.contenedorTabla{
+  margin-top: 2rem;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.color-azul{
+  background-color:#68afff;
+  text-align: center;
+  width: 200px;
+
+}
+
+
+.fa{
+  font-size: 45px !important;
+  color: #ffd203 !important;
+}

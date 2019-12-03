@@ -30,7 +30,7 @@ class CreateCompaniesTable extends Migration
                 ->comment('Estrellas en google maps. Puede Ser Util');
 
             // Foreign Key
-            $table->integer('user_id')->unsigned();;
+            $table->integer('user_id')->unsigned()->unique();
             $table->foreign('user_id')
                     ->references('id')->on('users')
                     ->onDelete('cascade');

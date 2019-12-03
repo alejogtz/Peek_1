@@ -16,7 +16,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'type', 'email', 'username', 'password',
+        'profile_photo', 'paypal', 'phone', 'email_verified_at'
     ];
 
     /**
@@ -36,4 +37,37 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     * Get the followers of this account
+     */
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'user_id', 'user_id_follower');
+    }
+
+    /**
+     * Get the following of this account
+     */
+    public function followings()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'user_id_follower', 'user_id');
+    }
+
+    /**
+     * Get the Pet binded
+     */
+    public function pet()
+    {
+        return $this->hasOne(Pet::class);
+    }
+
+    /**
+     * Get the Company binded
+     */
+    public function company()
+    {
+        return $this->hasOne(Company::class);
+    }
 }

@@ -21,3 +21,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 Route::get('/callback', 'SocialAuthFacebookController@callback');
+
+Route::view('/privacy-police', 'policies/privacy-police');
+
+
+
+Route::get('/redirectgoo', 'Auth\LoginController@redirectToProvider');
+Route::get('/callbackgoo', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('/perfil','ControllerPerfil@verVistaPerfil');
+Route::get('/veter','ControllerPerfil@verVistaVeterinario');
+

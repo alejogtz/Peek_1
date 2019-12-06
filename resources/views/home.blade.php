@@ -54,7 +54,7 @@
         <div class="card tarjeta">
           <div class="row">
             <img src="perrito.jpg" class="perfil-tarjeta" >
-            <p class="user"><a href="/perfil">firulais_cachorro</a></p>
+            <p class="user"><a href="/perfil" class="negro">firulais_cachorro</a></p>
           </div>
           <img src="perfil.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -288,7 +288,11 @@
         </div>
       </div>
 
-
+      <div class="inferior">
+          <a class="btn btn-subir" href=""> <img src="mas.png" class="mas"> </a>
+          <a class="" href=""> <img src="homeblack.png" class="home"> </a>
+          <a class="" href=""> <img src="perro.png" class="perro"> </a>
+      </div>
 
     </body>
 </html>

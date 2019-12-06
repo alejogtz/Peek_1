@@ -8,7 +8,8 @@ use App\Services\SocialGoogleAccountService;
 
 
 use App\User;
-use Socialite;
+use \Laravel\Socialite\Facades\Socialite;
+// use Socialite; // This works fine, but vscode-intelephense addon does not recognize symbol
 
 
 class LoginController extends Controller

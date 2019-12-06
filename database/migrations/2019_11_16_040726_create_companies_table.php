@@ -20,8 +20,11 @@ class CreateCompaniesTable extends Migration
             $table->string('bussines_email')->nullable()
                 ->comment('Mail de contacto');
 
-            $table->point('google_maps_position')->nullable()
-                ->comment('Latitude, Longitude');
+            //$table->point('google_maps_position')->nullable()
+            //    ->comment('Latitude, Longitude');            
+            // Point complejo de manejar. Se sustituye con Latitud y Longitud
+            $table->decimal('latitude', 13,10)->nullable();
+            $table->decimal('longitude',13,10)->nullable();            
 
             $table->string('description')->nullable()
                 ->comment('Aqui puede ser la mision de la empresa o algo así');

@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Company;
+use App\Models\Pet;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;

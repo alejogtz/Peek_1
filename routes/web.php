@@ -17,18 +17,31 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/redirect', 'SocialAuthFacebookController@redirect');
-Route::get('/callback', 'SocialAuthFacebookController@callback');
 
 Route::view('/privacy-police', 'policies/privacy-police');
 
-
-
-Route::get('/redirectgoo', 'Auth\LoginController@redirectToProvider');
-Route::get('/callbackgoo', 'Auth\LoginController@handleProviderCallback');
-
 Route::get('/perfil','ControllerPerfil@verVistaPerfil');
 Route::get('/veter','ControllerPerfil@verVistaVeterinario');
+
+
+
+/**+-----------------------------------------------------------------------+
+ * |                                                                       
+ * |             Rutas para el Caso de uso:
+ * |              Login con Fb, Goo y Email                                                     
+ * |                                                                       
+   +-----------------------------------------------------------------------+*/
+Route::get('/redirect',     'SocialAuthFacebookController@redirect');
+Route::get('/callback',     'SocialAuthFacebookController@callback');
+Route::get('/redirectgoo',  'Auth\LoginController@redirectToProvider');
+Route::get('/callbackgoo',  'Auth\LoginController@handleProviderCallback');
+
+Route::post('/save-extra-info-pet/{user_id}',      'Auth\RegisterController@savePet');
+Route::post('/save-extra-info-company/{user_id}',  'Auth\RegisterController@saveCompany');
+Route::post('/cancel-register/{user_id}',           'Auth\RegisterController@cancelRegister');
 

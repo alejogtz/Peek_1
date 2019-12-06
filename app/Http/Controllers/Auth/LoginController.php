@@ -66,9 +66,10 @@ class LoginController extends Controller
         try {
             $user = $service->createOrGetUser(Socialite::driver('google')->user());
             auth()->login($user);
-            return redirect()->to('/home');
+            return redirect()->to('/choice-type-accou');
         } catch (\Exception $e) {
-            return redirect('/login');
+            echo json_encode($e);
+            // return redirect('/login');
         }
     }
 }

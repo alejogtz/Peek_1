@@ -53,7 +53,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'username' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -164,4 +164,25 @@ class RegisterController extends Controller
 
         return redirect()->to('login');
     }
+
+    /** --------------------------------------------------------------------------------
+     * 
+     *         Funciones para manejar los datos extra, 
+     *          cuando se registran con google y FB
+     * 
+     * ---------------------------------------------------------------------------------- */
+
+     
+    public function redirectToSelectedView(Request $request){
+        $type = $request->input('type-account');
+
+        $r = 'auth.extraInfoPet';
+        if ($type == 'company') {
+            $r = 'auth.extraInfoCompany';
+        }
+
+        return view($r, ['user_id' => Auth::id()]);
+    }
+
+
 }

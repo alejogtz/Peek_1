@@ -31,4 +31,17 @@ class SocialFacebookAccountService
             return $user;
         }
     }
+
+    /**
+     * @param ProviderUser El usuario obtenido de Facebook API
+     * @return boolean
+     */
+    public function yaExiste(ProviderUser $providerUser){
+        $account = SocialAccount::whereProvider('facebook')
+            ->whereProviderUserId($providerUser->getId())
+            ->first();
+        if ($account) 
+            return true;
+        return false;
+    }
 }

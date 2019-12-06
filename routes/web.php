@@ -25,8 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/privacy-police', 'policies/privacy-police');
 
-Route::get('/perfil','ControllerPerfil@verVistaPerfil');
-Route::get('/veter','ControllerPerfil@verVistaVeterinario');
+//Route::get('/perfil','ControllerPerfil@verVistaPerfil');
+//Route::get('/veter','ControllerPerfil@verVistaVeterinario');
 
 
 
@@ -45,3 +45,5 @@ Route::post('/save-extra-info-pet/{user_id}',      'Auth\RegisterController@save
 Route::post('/save-extra-info-company/{user_id}',  'Auth\RegisterController@saveCompany');
 Route::post('/cancel-register/{user_id}',           'Auth\RegisterController@cancelRegister');
 
+// Facebook
+Route::post('/open-extra-info-view', 'Auth\RegisterController@redirectToSelectedView');

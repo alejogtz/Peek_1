@@ -9,10 +9,9 @@
 <body>
 
     <form action="/open-extra-info-view" method="post">
-
+        @csrf
         <input type="submit" value="pet" name='type-account'>
         <input type="submit" value="company" name='type-account'>
-
     </form>
     
 </body>

@@ -61,7 +61,7 @@
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>200</strong> Me gusta</p>
-              <a class="btn btn-donar" href="">Donar</a>
+             <!-- <a class="btn btn-donar" href="">Donar</a>-->
             </div>
               <p class="card-text"><strong>firulais_cachorro:</strong>  Muy cómodo, doname y seré feliz :)</p>
             <div class="row hashtag">
@@ -69,8 +69,14 @@
               <a class="" href=""><strong>#relax</strong></a>
               <a class="" href=""><strong>#amame</strong></a>
               <a class="" href=""><strong>#soltero</strong></a>
-              <a class="" href=""><strong>#doname</strong></a>
               <a class="" href=""><strong>#perrito</strong></a>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_donations" />
+              <input type="hidden" name="business" value="elmostachon12@gmail.com" />
+              <input type="hidden" name="currency_code" value="MXN" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Chido carnal" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+            </form>
             </div>
           </div>
         </div>
@@ -84,7 +90,7 @@
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>100</strong> Me gusta</p>
-              <a class="btn btn-donar" href="">Donar</a>
+              <!--a class="btn btn-donar" href="">Donar</a-->
             </div>
               <p class="card-text"><strong>pancrasio_gordito:</strong>  Aqui con mi amiguito el gato</p>
             <div class="row hashtag">
@@ -94,6 +100,13 @@
               <a class="" href=""><strong>#soltero</strong></a>
               <a class="" href=""><strong>#doname</strong></a>
               <a class="" href=""><strong>#perrito</strong></a>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_donations" />
+              <input type="hidden" name="business" value="elmostachon12@gmail.com" />
+              <input type="hidden" name="currency_code" value="MXN" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Chido carnal" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+            </form>
             </div>
           </div>
         </div>
@@ -107,7 +120,7 @@
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>560</strong> Me gusta</p>
-              <a class="btn btn-donar" href="">Donar</a>
+              <!--a class="btn btn-donar" href="">Donar</a-->
             </div>
               <p class="card-text"><strong>pancrasio_gordito:</strong>  Mi dueña me ama demasiado <3 </p>
             <div class="row hashtag">
@@ -117,6 +130,13 @@
               <a class="" href=""><strong>#soltero</strong></a>
               <a class="" href=""><strong>#doname</strong></a>
               <a class="" href=""><strong>#perrito</strong></a>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_donations" />
+              <input type="hidden" name="business" value="elmostachon12@gmail.com" />
+              <input type="hidden" name="currency_code" value="MXN" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Chido carnal" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+            </form>
             </div>
           </div>
         </div>
@@ -130,7 +150,7 @@
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>1034</strong> Me gusta</p>
-              <a class="btn btn-donar" href="">Donar</a>
+              <!--a class="btn btn-donar" href="">Donar</a-->
             </div>
               <p class="card-text"><strong>pancrasio_gordito:</strong>  Me encanta subirme a la cama :P </p>
             <div class="row hashtag">
@@ -140,6 +160,13 @@
               <a class="" href=""><strong>#soltero</strong></a>
               <a class="" href=""><strong>#doname</strong></a>
               <a class="" href=""><strong>#perrito</strong></a>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_donations" />
+              <input type="hidden" name="business" value="elmostachon12@gmail.com" />
+              <input type="hidden" name="currency_code" value="MXN" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Chido carnal" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+            </form>
             </div>
           </div>
         </div>
@@ -153,7 +180,7 @@
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>200</strong> Me gusta</p>
-              <a class="btn btn-donar" href="">Donar</a>
+              <!--a class="btn btn-donar" href="">Donar</a-->
             </div>
               <p class="card-text"><strong>pancrasio_gordito: </strong> Por favor ayudame, doname algo </p>
             <div class="row hashtag">
@@ -163,6 +190,13 @@
               <a class="" href=""><strong>#soltero</strong></a>
               <a class="" href=""><strong>#doname</strong></a>
               <a class="" href=""><strong>#perrito</strong></a>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_donations" />
+              <input type="hidden" name="business" value="elmostachon12@gmail.com" />
+              <input type="hidden" name="currency_code" value="MXN" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Chido carnal" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+            </form>
             </div>
           </div>
         </div>

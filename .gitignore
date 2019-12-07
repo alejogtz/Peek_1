@@ -12,8 +12,3 @@ npm-debug.log
 yarn-error.log
 .env.*
 peek.png
-app/ModelsORM/Users.php
-database/seeds/UsersTableSeeder.php
-app/Models/User.php app/Models/Users.php
-app/Models/User.php
-app/Models/Users.php

@@ -21,5 +21,5 @@ class Company extends Model{
 	public $incrementing = false;
 
 	//aqui los elementos a mostrarse de la tabla en cuestion
-	protected $fillable=['user_id','bussines_name','bussines_email','google_maps_position','description','rating'];
+	protected $fillable=['user_id','bussines_name','bussines_email','latitude', 'longitude','description','rating'];
 }

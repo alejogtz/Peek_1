@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\Users;
-use App\Models\Follows;
+use App\User;
+use App\Models\Follower;
 
 class Crud extends Controller {
      // ...
@@ -10,11 +10,7 @@ class Crud extends Controller {
      public function index(){
      }
 public function create(Request $request){
-  $request->validate([
-         'email'=>'required',
-         'username'=>'required',
-         'password'=>'required'
-     ]);
+
      $usuario = new User([
          'type' => $request->get('type'),
          'email' => $request->get('email'),
@@ -28,21 +24,46 @@ public function create(Request $request){
      $usuario->save();
      return redirect('/registro')->with('success', 'Usuario Agregado!');
 }
+public function registergeneraldata(Request $request){
+
+     $usuario = new User([
+         'paypal' => $request->get('paypal'),
+         'phone' => $request->get('phone'),
+         'profile_photo' => $request->get('profile_photo')
+     ]);
+     $usuario->save();
+
+     $mascota=new Pet([
+       'user_id' => $request->get('user_id'),
+       'name' => $request->get('name'),
+       'age' => $request->get('age'),
+       'sex' => $request->get('sex'),
+       'specie' => $request->get('specie'),
+       'description' => $request->get('description')
+     ]);
+     $mascota->save();
+     return redirect('/registro')->with('success', 'Usuario Agregado!');
+}
 
 
-    public function show($id){}
+    public function show($id){
+      $usuario = User::find($id);
+      $mascota= Pet::find($id);
+      $publicaciones=Post::find($id);
+      $datos = ['usuario' => $usuario, 'mascota' => $mascota,'publicaciones'=>$publicaciones];
+      return view('usuarios.show', compact('datos'));
+    }
 
    public function edit($id){
      $usuario = User::find($id);
-        return view('usuarios.edit', compact('usuario'));
+     $mascota= Pet::find($id);
+     $datos = ['usuario' => $usuario, 'mascota' => $mascota];
+
+        return view('usuarios.edit', compact('datos'));
    }
 
     public function update(Request $request, $id){
-      $request->validate([
-            'email'=>'required',
-            'username'=>'required',
-            'password'=>'required'
-        ]);
+
         $usuario = User::find($id);
         $usuario->type =  $request->get('type');
         $usuario->email = $request->get('email');
@@ -56,6 +77,24 @@ public function create(Request $request){
 
         return redirect('/usuarios')->with('success', 'Usuario Editado');
     }
+    public function updategeneraldata(Request $request, $id){
+        $usuario = User::find($id);
+        $usuario->profile_photo = $request->get('profile_photo');
+        $usuario->paypal = $request->get('paypal');
+        $usuario->phone = $request->get('phone');
+        $usuario->save();
+
+        $mascota=Pet::find($id);
+        $mascota->name=$request->get('name');
+        $mascota->age=$request->get('age');
+        $mascota->sex=$request->get('sex');
+        $mascota->specie=$request->get('specie');
+        $mascota->description=$request->get('description');
+        $mascota->save();
+
+
+        return redirect('/usuarios')->with('success', 'Usuario Editado');
+    }
 
     public function destroy($id)
     {
@@ -66,11 +105,8 @@ public function create(Request $request){
     }
 
     public function createfollow(Request $request){
-      $request->validate([
-             'user_id'=>'required',
-             'user_id_follow'=>'required'
-         ]);
-         $follow = new Follows([
+
+         $follow = new Follower([
              'user_id' => $request->get('user_id'),
              'user_id_follow' => $request->get('user_id_follow')
          ]);
@@ -78,12 +114,12 @@ public function create(Request $request){
          return redirect('/follows')->with('success', 'Follow Agregado!');
     }
     public function followers(Request $request,$id){
-         $followers = Follows::where('user_id','=',$id)->get();
+         $followers = Follower::where('user_id','=',$id)->get();
          return \View::make('list', compact('followers'));
 
     }
     public function followings(Request $request,$idotro){
-         $followers = Follows::where('user_id_follow','=',$idotro)->get();
+         $followers = Follower::where('user_id_follow','=',$idotro)->get();
          return \View::make('list', compact('followers'));
 
     }
@@ -91,7 +127,7 @@ public function create(Request $request){
 
     public function destroyfollow(Request $request,$idotroseguidor)
     {
-      $followers = Follows::find($idotroseguidor);
+      $followers = Follower::find($idotroseguidor);
       $followers->delete();
       return redirect()->back();
     }

@@ -61,7 +61,6 @@
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>200</strong> Me gusta</p>
-             <!-- <a class="btn btn-donar" href="">Donar</a>-->
             </div>
               <p class="card-text"><strong>firulais_cachorro:</strong>  Muy cómodo, doname y seré feliz :)</p>
             <div class="row hashtag">

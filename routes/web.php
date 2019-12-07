@@ -28,8 +28,10 @@ Route::view('/privacy-police', 'policies/privacy-police');
 Route::get('/perfil','ControllerPerfil@verVistaPerfil');
 Route::get('/veter','ControllerPerfil@verVistaVeterinario');
 
+
+
 //arreglo para el feed
-Route::get('/feed','ControllerPerfil@verVistaPerfil');
+Route::get('/feed','FeedController@feed');
 
 
 

@@ -179,7 +179,6 @@
             <div class="row">
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>200</strong> Me gusta</p>
-              <!--a class="btn btn-donar" href="">Donar</a-->
             </div>
               <p class="card-text"><strong>pancrasio_gordito: </strong> Por favor ayudame, doname algo </p>
             <div class="row hashtag">

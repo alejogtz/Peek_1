@@ -62,7 +62,7 @@
               <span id="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
               <p class="likes-number"><strong>200</strong> Me gusta</p>
             </div>
-              <p class="card-text"><strong>firulais_cachorro:</strong> no chelto</p>
+              <p class="card-text"><strong>firulais_cachorro:</strong>  Muy cómodo, doname y seré feliz :)</p>
             <div class="row hashtag">
               <a class="" href=""><strong>#dog</strong></a>
               <a class="" href=""><strong>#relax</strong></a>

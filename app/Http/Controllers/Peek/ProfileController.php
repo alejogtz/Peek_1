@@ -14,7 +14,5 @@ class ProfileController extends Controller
      * 
      * @return void
     */
-    public function(Request $data){
-
-    }
+    
 }

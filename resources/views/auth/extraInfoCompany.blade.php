@@ -57,7 +57,7 @@
 
             {!!Form::close() !!}
 
-            {!!Form::open(array('url'=>'cancel-register/','method'=>'post',
+            {!!Form::open(array('url'=>'cancel-register','method'=>'post',
             'autocomplete'=> 'on'))!!}
                 @csrf
 

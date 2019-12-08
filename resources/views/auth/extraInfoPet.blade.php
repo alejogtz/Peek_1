@@ -51,7 +51,7 @@
 </fieldset>
 {!!Form::close() !!}
 
-{!!Form::open(array('url'=>'cancel-register/'.$user_id,'method'=>'post',
+{!!Form::open(array('url'=>'cancel-register','method'=>'post',
         'autocomplete'=> 'on')) !!}
             @csrf
             <legend>Cancelar Registro</legend>

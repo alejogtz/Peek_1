@@ -41,9 +41,9 @@ Route::get('/callback',     'SocialAuthFacebookController@callback');
 Route::get('/redirectgoo',  'Auth\LoginController@redirectToProvider');
 Route::get('/callbackgoo',  'Auth\LoginController@handleProviderCallback');
 
-Route::post('/save-extra-info-pet/{user_id}',      'Auth\RegisterController@savePet');
-Route::post('/save-extra-info-company/{user_id}',  'Auth\RegisterController@saveCompany');
-Route::post('/cancel-register/{user_id}',           'Auth\RegisterController@cancelRegister');
+Route::post('/save-extra-info-pet',      'Auth\RegisterController@savePet');
+Route::post('/save-extra-info-company',  'Auth\RegisterController@saveCompany');
+Route::post('/cancel-register',           'Auth\RegisterController@cancelRegister');
 
 // Facebook
 Route::post('/open-extra-info-view', 'Auth\RegisterController@redirectToSelectedView');

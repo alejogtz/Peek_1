@@ -8,7 +8,7 @@
 </head>
 <body>
 
-        {!!Form::open(array('url'=>'save-extra-info-company/'.$user_id,'method'=>'post',
+        {!!Form::open(array('url'=>'save-extra-info-company','method'=>'post',
         'autocomplete'=> 'on', 'enctype'=>'multipart/form-data')) !!}
         @csrf
         <fieldset>

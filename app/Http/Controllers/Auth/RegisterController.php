@@ -94,7 +94,7 @@ class RegisterController extends Controller
     }
 
 
-    public function savePet(Request $request, $user_id)
+    public function savePet(Request $request)
     {
         //code...
         // Extra data
@@ -125,7 +125,7 @@ class RegisterController extends Controller
 
     }
 
-    public function saveCompany(Request $request, $user_id)
+    public function saveCompany(Request $request)
     {
         //code...
         // Extra data
@@ -174,12 +174,17 @@ class RegisterController extends Controller
 
      
     public function redirectToSelectedView(Request $request){
-        $type = $request->input('type-account');
+        $type = $request->input('type-account', 'pet');
 
         $r = 'auth.extraInfoPet';
         if ($type == 'company') {
             $r = 'auth.extraInfoCompany';
         }
+
+        // Cambiar Tipo de cuenta en User.
+        $user = User::find(Auth::id());
+        $user->type = $type;
+        $user->save();
 
         return view($r, ['user_id' => Auth::id()]);
     }

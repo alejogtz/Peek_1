@@ -9,7 +9,7 @@
 </head>
 <body>
     
-{!!Form::open(array('url'=>'save-extra-info-pet/{{$user_id}}','method'=>'post',
+{!!Form::open(array('url'=>'save-extra-info-pet','method'=>'post',
 'autocomplete'=> 'on', 'enctype'=>'multipart/form-data'   )) !!}
 @csrf
 <fieldset>

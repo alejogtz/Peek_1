@@ -63,13 +63,22 @@ class LoginController extends Controller
      */
     public function handleProviderCallback(SocialGoogleAccountService $service)
     {
-        try {
-            $user = $service->createOrGetUser(Socialite::driver('google')->user());
+        //try {
+            $provide_user = Socialite::driver('google')->user();
+
+            $existe = $service->yaExiste($provide_user);
+
+            $user = $service->createOrGetUser($provide_user);
             auth()->login($user);
-            return redirect()->to('/choice-type-accou');
-        } catch (\Exception $e) {
-            echo json_encode($e);
+    
+            if (!$existe){
+                return view('auth.choiceTypeAccount');
+            }            
+            return redirect()->to('/home');
+            
+        //} catch (\Exception $e) {
+            //echo json_encode($e);
             // return redirect('/login');
-        }
+        //}
     }
 }

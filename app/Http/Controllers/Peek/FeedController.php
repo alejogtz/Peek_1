@@ -18,11 +18,13 @@ class FeedController extends Controller
 	}
   public function feed2()
 {
-      $posts = Post::orderBy('id', 'DESC')->first(1);
+      $posts = Post::orderBy('id', 'DESC')->first();
       $usuario = User::find($posts->get('user_id'));
       $likes = Like::where('post_id','=',$posts->get('id'))->count();
       //$comments = Comment::where('post_id','=',$posts->get('id'))->get(1);
       $datos = ['posts' => $posts, 'usuario' => $usuario,'likes' => $likes];
-      return view('feed', compact('datos'));
+      // return $datos;
+      // return view('home', compact('datos'));
+      return view('home')->with('datos', $datos);
 }
 }

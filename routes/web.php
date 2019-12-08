@@ -28,14 +28,11 @@ Route::view('/privacy-police', 'policies/privacy-police');
 Route::get('/perfil','ControllerPerfil@verVistaPerfil');
 Route::get('/veter','ControllerPerfil@verVistaVeterinario');
 
-<<<<<<< HEAD
 //arreglo para el feed
 Route::get('/feed','FeedController@feed');
-=======
 Route::get('/registrarPet','Auth\RegisterController@registrarMascota');
 Route::get('/registrarVete','Auth\RegisterController@registrarVete');
 
->>>>>>> vistasjesus
 
 
 
@@ -52,8 +49,4 @@ Route::get('/callbackgoo',  'Auth\LoginController@handleProviderCallback');
 
 Route::post('/save-extra-info-pet/{user_id}',      'Auth\RegisterController@savePet');
 Route::post('/save-extra-info-company/{user_id}',  'Auth\RegisterController@saveCompany');
-<<<<<<< HEAD
 Route::post('/cancel-register/{user_id}',           'Auth\RegisterController@cancelRegister');
-=======
-Route::post('/cancel-register/{user_id}',           'Auth\RegisterController@cancelRegister');
->>>>>>> vistasjesus

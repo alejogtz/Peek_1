@@ -118,6 +118,10 @@ box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
   margin-bottom: 12px;
 }
 
+.negro{
+  color: black;
+}
+
 .fa{
   font-size: 23px !important;
 }
@@ -145,6 +149,7 @@ box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
 
 .hashtag{
   margin-left: 1px;
+
 }
 
 p{
@@ -228,15 +233,186 @@ box-shadow: 2px 5px 20px -11px rgba(0,0,0,0.75);
 }
 
 a{
-  color: black;
+
 }
 
 a:hover{
-  color: black;
+  color: blue;
   text-decoration: none;
 }
 
 .banner{
   width: 385px;
   height: 70px;
+}
+
+.inferior{
+  visibility: collapse;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  html{
+    background-color: #ecf0f6;
+    background-image: none;
+  }
+
+  .card-img-top {
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    -webkit-box-shadow: -1px 8px 19px -7px rgba(0,0,0,0.45);
+  -moz-box-shadow: -1px 8px 19px -7px rgba(0,0,0,0.45);
+  box-shadow: -1px 8px 19px -7px rgba(0,0,0,0.45);
+    width: 94%;
+  }
+
+  .barra{
+    height: 60px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 0px;
+    -webkit-box-shadow: -1px -2px 19px -7px rgba(0,0,0,0.34);
+    -moz-box-shadow: -1px -2px 19px -7px rgba(0,0,0,0.34);
+    box-shadow: -1px -2px 19px -7px rgba(0,0,0,0.34);
+  }
+
+  .boton-login{
+    margin-right: 0px;
+    visibility: collapse;
+  }
+
+  .perfil{
+    visibility: collapse;
+  }
+
+  .logo{
+    width: 92px !important;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .derecha{
+    visibility: collapse;
+  }
+
+  .izquierda{
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .tarjeta{
+    width: auto !important;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 17px;
+    border: 0px;
+    margin-bottom: 10px;
+  }
+
+  .btn-donar{
+    margin-left: 33%;
+    margin-top: -2px;
+  }
+
+  .row{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .perfil-tarjeta{
+    margin-left: 20px;
+    height: 32px;
+  }
+
+  .likes-number{
+    margin-left: 7px;
+    font-size: 12px;
+    margin-top: 7px;
+  }
+
+  .card-body{
+    margin-top: -5px;
+  }
+
+  .card-text{
+    font-size: 13px;
+  }
+
+  .hashtag{
+    font-size: 13px;
+    color:
+  }
+
+  .a:hover{
+    text-decoration: underline;
+  }
+
+  #heart{
+    margin-left: 0px;
+  }
+
+  .inferior{
+      visibility: visible;
+    background: white;
+      position:fixed;; /*El div será ubicado con relación a la pantalla*/
+      left:0px; /*A la derecha deje un espacio de 0px*/
+      right:0px; /*A la izquierda deje un espacio de 0px*/
+      bottom:0px; /*Abajo deje un espacio de 0px*/
+      height:55px; /*alto del div*/
+      z-index:3;
+      -webkit-box-shadow: 0px 7px 19px -1px rgba(0,0,0,0.58);
+      -moz-box-shadow: 0px 7px 19px -1px rgba(0,0,0,0.58);
+      box-shadow: 0px 7px 19px -1px rgba(0,0,0,0.58);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .form-control{
+      margin-top: 0px;
+      margin-left: 30%;
+      margin-left: 37%;
+      width: 70%;
+      text-align: right !important;
+      border-radius: 20px;
+    }
+
+    .user{
+      font-size: 13px;
+    }
+
+    .btn-subir{
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0px;
+      height: 37px !important;
+      border-radius: 18px;
+      padding-right: 8px;
+      padding-left: 8px;
+      background-color: #bc59d7 !important;
+      width: 50px;
+      margin-top: 10px;
+    }
+
+    .mas{
+      width: 22px;
+    }
+
+    .home{
+      width: 27px;
+display: block;
+margin-top: -30px;
+margin-left: 20%;
+    }
+
+    .perro{
+      width: 24px;
+display: block;
+margin-top: -26px;
+margin-left: 73%;
+    }
 }

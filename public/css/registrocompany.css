@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point:700&display=swap');
+
+html{
+  background-image: url("../vete.jpg");
+}
+
+body{
+  background: none;
+  font-family: 'Sulphur Point', sans-serif;
+}
+
+h2{
+  color: #435972;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: 'Sulphur Point', sans-serif;
+}
+h5{
+  margin-top: 20px;
+  color: #435972;
+  font-weight: bold;
+}
+
+label{
+  color: #47525d;
+}
+
+input{
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.etiqueta{
+  border-width: 0px;
+}
+
+.formulario{
+  height: 30rem !important;
+}
+
+.base{
+  margin-top: 40px;
+margin-left: 10%;
+margin-right: 10%;
+background-color: white;
+border-radius: 40px;
+padding-left: 50px;
+padding-top: 30px;
+padding-bottom: 20px;
+height: 35rem ;
+border-bottom-right-radius: 50%300px;
+border-top-right-radius: 50%300px;
+width: 42%;
+-webkit-box-shadow: 0px 9px 17px -3px rgba(82,82,82,0.69);
+-moz-box-shadow: 0px 9px 17px -3px rgba(82,82,82,0.69);
+box-shadow: 0px 9px 17px -3px rgba(82,82,82,0.69);
+}
+
+.boton{
+  text-align: center !important;
+  height: 30px;
+  margin-left: 20px;
+  border-radius: 34px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: #bc59d7 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 14px;
+  -webkit-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+  -moz-box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+  box-shadow: 2px 9px 26px -6px rgba(188,89,215,1);
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.cancelar{
+  text-align: center !important;
+  height: 30px;
+  margin-left: 20px;
+  border-radius: 34px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f94950 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 14px;
+  -webkit-box-shadow: 2px 9px 26px -6px rgba(249,73,80,1);
+  -moz-box-shadow: 2px 9px 26px -6px rgba(249,73,80,1);
+  box-shadow: 2px 9px 26px -6px rgba(249,73,80,1);
+  margin-top: 20px;
+}
+
+.input-descripcion{
+  width: 350px;
+}

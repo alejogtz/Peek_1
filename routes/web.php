@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Auth::routes();
@@ -28,13 +28,19 @@ Route::view('/privacy-police', 'policies/privacy-police');
 //Route::get('/perfil','ControllerPerfil@verVistaPerfil');
 //Route::get('/veter','ControllerPerfil@verVistaVeterinario');
 
+//arreglo para el feed
+Route::get('/feed','FeedController@feed');
+Route::get('/registrarPet','Auth\RegisterController@registrarMascota');
+Route::get('/registrarVete','Auth\RegisterController@registrarVete');
+
+
 
 
 /**+-----------------------------------------------------------------------+
- * |                                                                       
+ * |
  * |             Rutas para el Caso de uso:
- * |              Login con Fb, Goo y Email                                                     
- * |                                                                       
+ * |              Login con Fb, Goo y Email
+ * |
    +-----------------------------------------------------------------------+*/
 Route::get('/redirect',     'SocialAuthFacebookController@redirect');
 Route::get('/callback',     'SocialAuthFacebookController@callback');

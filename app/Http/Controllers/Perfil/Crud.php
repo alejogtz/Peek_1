@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Models\Follower;
+use App\Models\Pet;
 
 class Crud extends Controller {
      // ...
@@ -49,7 +50,7 @@ public function registergeneraldata(Request $request){
     public function show($id){
       $usuario = User::find($id);
       $mascota= Pet::find($id);
-      $publicaciones=Post::find($id);
+      $publicaciones=Post::where('user_id','=',$id)->get();
       $datos = ['usuario' => $usuario, 'mascota' => $mascota,'publicaciones'=>$publicaciones];
       return view('usuarios.show', compact('datos'));
     }
@@ -113,13 +114,18 @@ public function registergeneraldata(Request $request){
          $follow->save();
          return redirect('/follows')->with('success', 'Follow Agregado!');
     }
-    public function followers(Request $request,$id){
+    /*public function followers(Request $request,$id){
          $followers = Follower::where('user_id','=',$id)->get();
          return \View::make('list', compact('followers'));
 
+    }*/
+    public function followers($id){
+         $followers = User::find($id)->followers();
+         return \View::make('list', compact('followers'));
+
     }
-    public function followings(Request $request,$idotro){
-         $followers = Follower::where('user_id_follow','=',$idotro)->get();
+    public function followings($idotro){
+         $followers = User::find($id)->followings();
          return \View::make('list', compact('followers'));
 
     }

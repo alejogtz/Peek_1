@@ -28,8 +28,6 @@ Route::view('/privacy-police', 'policies/privacy-police');
 Route::get('/perfil','ControllerPerfil@verVistaPerfil');
 Route::get('/veter','ControllerPerfil@verVistaVeterinario');
 
-
-
 //arreglo para el feed
 Route::get('/feed','FeedController@feed');
 
@@ -49,4 +47,3 @@ Route::get('/callbackgoo',  'Auth\LoginController@handleProviderCallback');
 Route::post('/save-extra-info-pet/{user_id}',      'Auth\RegisterController@savePet');
 Route::post('/save-extra-info-company/{user_id}',  'Auth\RegisterController@saveCompany');
 Route::post('/cancel-register/{user_id}',           'Auth\RegisterController@cancelRegister');
-

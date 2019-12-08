@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\User;
 use App\Models\Follower;
@@ -107,7 +108,7 @@ public function registergeneraldata(Request $request){
 
     public function createfollow(Request $request){
 
-         $follow = new Follower([
+         $follow = new Follow([
              'user_id' => $request->get('user_id'),
              'user_id_follow' => $request->get('user_id_follow')
          ]);

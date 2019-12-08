@@ -44,6 +44,15 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function registrarMascota()
+    {
+        return view('auth/extraInfoPet');
+    }
+
+    public function registrarVete()
+    {
+        return view('auth/extraInfoCompany');
+    }
     /**
      * Get a validator for an incoming registration request.
      *

@@ -69,7 +69,7 @@
                               </a>
                           </div>
 
-                            <a class="nav-link registrarse" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                            <a class="nav-link registrarse" href="/registrarPet">{{ __('Registrarse') }}</a>
                     </form>
 
             </div>

@@ -9,6 +9,7 @@ use App\User;
 use App\Models\Post;
 use App\Models\Like;
 use App\Models\Comment;
+use Illuminate\Support\Facades\Auth;
 
 class FeedController extends Controller
 {
@@ -41,6 +42,6 @@ class FeedController extends Controller
         $datos = ['posts' => $posts, 'usuario' => $usuario, 'likes' => $likes];*/
         // return $datos;
         // return view('home', compact('datos'));
-        return view('home')->with('datos', $datos);
+        return view('home',['user_id' => Auth::id()])->with('datos', $datos);
     }
 }

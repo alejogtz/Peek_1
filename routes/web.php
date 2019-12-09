@@ -25,15 +25,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/privacy-police', 'policies/privacy-police');
 
-//Route::get('/perfil','ControllerPerfil@verVistaPerfil');
-//Route::get('/veter','ControllerPerfil@verVistaVeterinario');
+Route::get('/perfil','ControllerPerfil@verVistaPerfil');
+Route::get('/veter','ControllerPerfil@verVistaVeterinario');
 
 //arreglo para el feed
 Route::get('/feed','FeedController@feed');
 Route::get('/registrarPet','Auth\RegisterController@registrarMascota');
 Route::get('/registrarVete','Auth\RegisterController@registrarVete');
 
-
+Route::get('/feed2','Peek\FeedController@feed2');
 
 
 /**+-----------------------------------------------------------------------+
@@ -53,3 +53,14 @@ Route::post('/cancel-register',           'Auth\RegisterController@cancelRegiste
 
 // Facebook
 Route::post('/open-extra-info-view', 'Auth\RegisterController@redirectToSelectedView');
+
+
+
+/**+-----------------------------------------------------------------------+
+ * |
+ * |             Rutas De Aurelio 
+ * |
+   +-----------------------------------------------------------------------+*/
+Route::get('/newpost',  'Auth\NewPostController@verVista');
+Route::post('/savenewpost',     'Auth\NewPostController@saveNewPost');
+Route::post('/cancel-post',           'Auth\NewPostController@cancelRegister');

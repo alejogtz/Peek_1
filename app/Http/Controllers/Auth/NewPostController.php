@@ -99,7 +99,7 @@ class NewPostController extends Controller
         return view('uploadImage');
     }
 
-    public function saveNewPost(Request $request, $user_id)
+    public function saveNewPost(Request $request)
     {
         //code...
         // Extra data
@@ -130,7 +130,7 @@ class NewPostController extends Controller
     }
 
 
-    public function cancelRegister(Request $request, $user_id)
+    public function cancelRegister(Request $request)
     {
 
         return redirect()->to('login');

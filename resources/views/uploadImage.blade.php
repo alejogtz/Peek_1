@@ -12,7 +12,7 @@
 <body>
 
 <div class="base">
-{!!Form::open(array('url'=>'savenewpost/','method'=>'post',
+{!!Form::open(array('url'=>'savenewpost','method'=>'post',
 'autocomplete'=> 'on', 'enctype'=>'multipart/form-data'   )) !!}
 @csrf
 
@@ -31,7 +31,7 @@
 
 {!!Form::close() !!}
 
-{!!Form::open(array('url'=>'cancel-register/','method'=>'post',
+{!!Form::open(array('url'=>'cancel-post','method'=>'post',
         'autocomplete'=> 'on')) !!}
             @csrf
             <h5>Cancelar</h5>

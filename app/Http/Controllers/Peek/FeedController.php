@@ -39,8 +39,8 @@ class FeedController extends Controller
         $likes = Like::where('post_id', '=', $posts->get('id'))->count();
         //$comments = Comment::where('post_id','=',$posts->get('id'))->get(1);
         $datos = ['posts' => $posts, 'usuario' => $usuario, 'likes' => $likes];*/
-        return $datos;
+        // return $datos;
         // return view('home', compact('datos'));
-        //return view('home')->with('datos', $datos);
+        return view('home')->with('datos', $datos);
     }
 }

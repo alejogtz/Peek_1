@@ -37,8 +37,8 @@
         <input type="radio" name="sex" value="male" title="male" checked>Macho<br>
         <input type="radio" name="sex" value="female" title="female">Hembra<br>
     </div><br>
-    {{Form::label('Especie:')}}
-    {{Form::text( 'especie', null) }}
+    {{Form::label('specie', 'Especie:')}}
+    {{Form::text( 'specie', null) }}
     <br>
     {{Form::label('description', 'Cuentanos algo de tu mascota:')}}
     <br>

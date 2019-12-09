@@ -1,0 +1,12 @@
+html{
+  background-image: url("../pets.jpg");
+}
+
+.base{
+  background-color: black;
+  height: 32rem;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 30px;
+}

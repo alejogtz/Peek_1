@@ -54,12 +54,13 @@ Route::post('/cancel-register',           'Auth\RegisterController@cancelRegiste
 // Facebook
 Route::post('/open-extra-info-view', 'Auth\RegisterController@redirectToSelectedView');
 
+
+
 /**+-----------------------------------------------------------------------+
  * |
- * |             Rutas Para el Post de Aurelio
+ * |             Rutas De Aurelio 
  * |
    +-----------------------------------------------------------------------+*/
-
 Route::get('/newpost',  'Auth\NewPostController@verVista');
 Route::post('/savenewpost',     'Auth\NewPostController@saveNewPost');
 Route::post('/cancel-post',           'Auth\NewPostController@cancelRegister');

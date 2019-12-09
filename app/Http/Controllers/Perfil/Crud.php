@@ -1,10 +1,15 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Perfil;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\User;
 use App\Models\Follower;
 use App\Models\Pet;
+use App\Models\Company;
+use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
+
 
 class Crud extends Controller {
      // ...
@@ -50,10 +55,22 @@ public function registergeneraldata(Request $request){
 
     public function show($id){
       $usuario = User::find($id);
-      $mascota= Pet::find($id);
       $publicaciones=Post::where('user_id','=',$id)->get();
-      $datos = ['usuario' => $usuario, 'mascota' => $mascota,'publicaciones'=>$publicaciones];
-      return view('usuarios.show', compact('datos'));
+      $mascota=null;
+      $company=null;
+      $datos=null;
+      if($usuario->type=='pet'){
+        $mascota= Pet::where('user_id','=',$id)->get()->first();
+        $datos = ['usuario' => $usuario, 'mascota' => $mascota,'publicaciones'=>$publicaciones, 'user_id' => Auth::id()];
+        return view('vista', compact('datos'));
+      }
+      else {
+        $company=Company::where('user_id','=',$id)->get()->first();
+        $datos = ['usuario' => $usuario, 'company' => $company,'publicaciones'=>$publicaciones,'user_id' => Auth::id()];
+        return view('vistaVeterinaria', compact('datos'));
+      }
+
+
     }
 
    public function edit($id){

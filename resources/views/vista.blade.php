@@ -20,14 +20,15 @@
   <nav class="navbar navbar-light bg-light barra">
   <div class="row">
     <div class="">
-      <img src="logo2.png" class="logo">
+      <a href="/feed2"  ><img src="../logo2.png" class="logo"></a>
     </div>
 
     <form class="busqueda">
       <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
     </form>
 
-    <img src="perfil.jpg" class="perfil">
+
+    <a href="perfil/{{ $datos['user_id'] }}"><img src="../{!! $datos['usuario']->profile_photo !!}" class="perfil"></a>
 
     <a class="btn boton-login" href="{{ route('logout') }}"
       onclick="event.preventDefault();
@@ -51,16 +52,21 @@
               </div>
 
               <div class="col-4">
-                  <img class="imgPanel" src="perrito.jpg">
+                  <img class="imgPanel" src="../{!! $datos['usuario']->profile_photo !!}">
                   <br>
               </div>
 
               <div class="col-6">
-                  <h2 class="tituloPanel">firulais_cachorro</h2>
-                  <h3 class="tituloDescrip">Raza Huski, macho de 5 años, soy un perrito muy juguetón,</h2>
-                  <h3 class="tituloDescrip">me encanta la comida y busco pareja.</h2>
+                  <h2 class="tituloPanel">{!! $datos['usuario']->username !!}</h2>
+                  <h3 class="tituloDescrip">Especie: {!! $datos['mascota']->specie !!}, Edad: {!! $datos['mascota']->age !!} años, Sexo: {!! $datos['mascota']->sex !!}</h2>
+                  <h3 class="tituloDescrip">{!! $datos['mascota']->description !!}</h2>
                   <br>
-                  <a href="" class="btn color-azul  text-white sombra">Doname</a>
+
+              @if ($datos['user_id'] === $datos['usuario']->id )
+                  <a href="/newpost" class="btn color-azul  text-white sombra">Subir post</a>
+              @endif
+
+
 
 
               </div>
@@ -79,93 +85,21 @@
 
         <div class="container-fluid conten">
             <div class="row contenRow">
+@foreach ($datos['publicaciones'] as $imagen)
+
 
               <div class="col-4">
 
 
-                  <img class="imgC sombra" src="foto1.png">
+                  <img class="imgC sombra" src="../{!! $imagen['photo']!!}">
 
 
               </div>
 
+@endforeach
+</div>
 
-
-              <div class="col-4" >
-
-                      <img class="imgC sombra" src="foto2.png">
-
-              </div>
-
-              <div class="col-4">
-
-                    <img class="imgC sombra" src="foto3.png">
-
-              </div>
-
-            </div>
-
-        </div>
-
-        <div class="container-fluid conten ">
-            <div class="row contenRow">
-
-              <div class="col-4">
-
-
-                  <img class="imgC sombra" src="foto4.jpg">
-
-
-              </div>
-
-
-
-              <div class="col-4" >
-
-                      <img class="imgC sombra" src="foto5.jpg">
-
-              </div>
-
-              <div class="col-4">
-
-                    <img class="imgC sombra" src="foto6.jpg">
-
-              </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="container-fluid conten ">
-            <div class="row contenRow">
-
-              <div class="col-4">
-
-
-                  <img class="imgC sombra" src="foto7.jpg">
-
-
-              </div>
-
-
-
-              <div class="col-4" >
-
-                      <img class="imgC sombra" src="foto8.jpg">
-
-              </div>
-
-              <div class="col-4">
-
-                    <img class="imgC sombra" src="foto9.jpg">
-
-              </div>
-
-            </div>
-
-        </div>
-
-
+</div>
 
   </body>
 </html>

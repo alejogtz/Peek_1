@@ -23,8 +23,8 @@ class FeedController extends Controller
         $datos = [];
         for ($i = 0; $i < 20; $i++) {
             $post = Post::orderBy('id', 'DESC')->offset($i)->first();
-            if ($post) {                
-                $usuario = User::find($post->get('user_id'));
+            if ($post) {
+                $usuario = User::find($post->user_id);
                 $likes = Like::where('post_id', '=', $post->get('id'))->count();
 
                 $wrapper = new DTOsPost();

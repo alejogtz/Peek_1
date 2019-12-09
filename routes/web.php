@@ -20,16 +20,16 @@ Auth::routes();
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'Peek\FeedController@feed2');
 
 
 Route::view('/privacy-police', 'policies/privacy-police');
 
-Route::get('/perfil','ControllerPerfil@verVistaPerfil');
+Route::get('/perfil/{id}','Perfil\Crud@show');
 Route::get('/veter','ControllerPerfil@verVistaVeterinario');
 
 //arreglo para el feed
-Route::get('/feed','FeedController@feed');
+Route::get('/feed','Peek\FeedController@feed');
 Route::get('/registrarPet','Auth\RegisterController@registrarMascota');
 Route::get('/registrarVete','Auth\RegisterController@registrarVete');
 
@@ -58,7 +58,7 @@ Route::post('/open-extra-info-view', 'Auth\RegisterController@redirectToSelected
 
 /**+-----------------------------------------------------------------------+
  * |
- * |             Rutas De Aurelio 
+ * |             Rutas De Aurelio
  * |
    +-----------------------------------------------------------------------+*/
 Route::get('/newpost',  'Auth\NewPostController@verVista');

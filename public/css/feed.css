@@ -3,6 +3,10 @@ html{
   background-attachment: fixed;
 }
 
+.imgPanel{
+  border-radius: 150px;
+}
+
 .barra{
   -webkit-box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 9px 17px -15px rgba(0,0,0,0.75);
@@ -250,6 +254,10 @@ a:hover{
   visibility: collapse;
 }
 
+.doname{
+  width: 100px;
+  margin-left: 17rem;
+}
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
 

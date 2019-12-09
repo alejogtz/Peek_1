@@ -125,7 +125,7 @@ class NewPostController extends Controller
         ]);
 
 
-        return redirect()->to('home'); //->with('user_id', $user_id);
+        return redirect()->to('/feed2'); //->with('user_id', $user_id);
 
     }
 

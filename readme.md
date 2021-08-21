@@ -14,7 +14,7 @@ imagenes de sus adorados, interactuar con otros usuarios y recibir donaciones pa
 
 ### Installing Dependencies
 
-To create a standalone enviroment for Laravel you can use `Dockerimage` present in this project
+To create a standalone enviroment for Laravel you can use `Dockerfile` present in this project to build a php enviroment
 
 To create image run command
 ```bash

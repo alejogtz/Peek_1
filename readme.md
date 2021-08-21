@@ -1,72 +1,168 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+![Logo](https://i.imgur.com/EcpUqsj.png)
 
-## About Laravel
+    
+# Instagram para Mascotas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ejercicio de empresa _fake_ desarrollada que presenta una propuesta de Red Social para mascotas en la cual los duseños de las mascotas como perros, gatos, etc puedan compartir
+imagenes de sus adorados, interactuar con otros usuarios y recibir donaciones para su mascota.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Installation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Installing Dependencies
 
-## Laravel Sponsors
+To create a standalone enviroment for Laravel you can use `Dockerimage` present in this project
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+To create image run command
+```bash
+$ git clone https://github.com/alejogtz/fake-instagram-for-pets Project
+$ cd Project
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+$ docker build -t alekhius/laravel-env:1.0 .
 
-## Contributing
+// Run  instance and interact with shell
+docker run -it \
+    --rm \
+    --name pets \
+    --network $NETWORK_NAME --ip 172.19.0.3 \
+    -p 8080:8000 \
+    -v $PWD:/app alekhius/laravel-env:1.0 sh
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Una vez creado el ambiente instala las dependencias
 
-## Security Vulnerabilities
+    root# $ composer install
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+> Si te impide instalar, intenta borrar composer.lock
 
-## License
+**Genera una API Key**
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    php artisan key:generate
+
+****
+
+## Prepara Base de datos
+
+### Restaura la base de datos
+
+**Using docker**
+```bash
+$ export MYSQL_SECRET_PASS=q1w2e3r4
+$ export CONTAINER_NAME=mysql
+
+$ docker run --name $CONTAINER_NAME -e MYSQL_ROOT_PASSWORD=$MYSQL_SECRET_PASS -p 3306:3306 -d mysql:5.7
+
+# docker run --network fake-network --ip 172.19.0.4 --alias  --name my_mysql -e MYSQL_ROOT_PASSWORD=q1w2e3r4 -p 3307:3306 -d mysql:5.7
+
+$ docker exec $CONTAINER_NAME sh -c 'mysql -u root -p $MYSQL_SECRET_PASS -e "CREATE database LaravelSample"'
+```
+
+```diff
+-   DB_CONNECTION=
++   DB_CONNECTION=mysql  #mysql, postgres, etc.
+    DB_HOST=${MYSQL_HOST} 
+    DB_HOST=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql)
+    DB_PORT=${MYSQL_PORT} # tipically 3306
+    DB_DATABASE=laravel 
+    DB_USERNAME=root
+    DB_PASSWORD=
+```
+
+```diff
+root@2bbf61113940:/# cat /etc/mysql/mysql.conf.d/mysqld.cnf 
+...
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+#log-error      = /var/log/mysql/error.log
+# By default we only accept connections from localhost
+- # bind-address    = 127.0.0.1
++ bind-address    = 0.0.0.0
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+
+```
+
+### Comunicar instancia de `Mysql` con instancia de `Laravel`
+
+```bash
+$ docker network create --subnet=172.19.0.0/16 fake-network
+9f4232047b7682b074c162915fe6cf3b47e3b2b37dd7b2f305e723ed836352b5
+
+$ export CONTAINER_NAME=mysql
+$ export NETWORK_NAME=fake-network
+$ docker network connect $NETWORK_NAME $CONTAINER_NAME
+$ docker network connect --alias mysql --ip 172.19.0.2 $NETWORK_NAME $CONTAINER_NAME
+
+$ docker network disconnect $NETWORK_NAME $CONTAINER_NAME
+```
+
+Once into container, You can check that you can ping mysql container instance
+
+```bash
+root/app$ ping mysql
+PING mysql (172.19.0.2): 56 data bytes
+64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.123 ms
+64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.129 ms
+64 bytes from 172.19.0.2: seq=2 ttl=64 time=0.096 ms
+64 bytes from 172.19.0.2: seq=3 ttl=64 time=0.095 ms
+64 bytes from 172.19.0.2: seq=4 ttl=64 time=0.093 ms
+^C
+--- mysql ping statistics ---
+5 packets transmitted, 5 packets received, 0% packet loss
+round-trip min/avg/max = 0.093/0.107/0.129 ms
+```
+
+
+
+### Create Laravel Key
+```bash
+ /app $ php artisan migrate
+
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (0.03 seconds)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (0.02 seconds)
+Migrating: 2019_11_10_012709_create_social_facebook_accounts_table
+Migrated:  2019_11_10_012709_create_social_facebook_accounts_table (0 seconds)
+Migrating: 2019_11_11_011251_create_post_table
+Migrated:  2019_11_11_011251_create_post_table (0.03 seconds)
+Migrating: 2019_11_11_013242_create_like_table
+Migrated:  2019_11_11_013242_create_like_table (0.05 seconds)
+Migrating: 2019_11_11_013447_create__comentario_table
+Migrated:  2019_11_11_013447_create__comentario_table (0.06 seconds)
+Migrating: 2019_11_16_040725_create_follows_table
+Migrated:  2019_11_16_040725_create_follows_table (0.07 seconds)
+Migrating: 2019_11_16_040725_create_social_accounts_table
+Migrated:  2019_11_16_040725_create_social_accounts_table (0.03 seconds)
+Migrating: 2019_11_16_040726_create_companies_table
+Migrated:  2019_11_16_040726_create_companies_table (0.05 seconds)
+Migrating: 2019_11_16_040726_create_pets_table
+Migrated:  2019_11_16_040726_create_pets_table (0.05 seconds)
+```
+
+Run command 
+
+```bash
+  php artisan key:generate
+
+  php artisan migrate
+
+  php artisan serve --host 0.0.0.0 --port 80
+```
+
+
+# Screenshots
+
+**Inicio de sesion**
+
+![](https://i.imgur.com/Sr4RIlR.png)
+
+**Home**
+
+![](https://i.imgur.com/HdiEfSX.png)

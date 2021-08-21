@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    laravel:
+        container_name: pets
+        image: alekhius:laravel-env:1.0
+        ports:
+            - '8080:80'
+            - 172.18.0.1
+        network_mode: fake-network
+        volumes:
+            - '$PWD:/app'
